@@ -1,0 +1,38 @@
+:root {
+
+    font-size: 16px;
+}
+
+body,html {
+    background:#fdfdfd;
+}
+
+footer {
+    clear:both;
+    margin-top:3rem;
+    padding:3rem;
+    text-align:center;
+    color:white;
+    box-shadow: 0 50vh 0 50vh var(--holt-bosse-dark-green);
+}
+
+body.search .buttons {
+    flex:1em;
+}
+a.search_result_button.button.is-light.is-info {
+    margin-top: 1em;
+}
+
+.container:first-of-type {
+    margin-top:2rem;
+}
+
+.art .table {
+    width:100%;
+}
+.artthumb {
+    max-width:150px;
+    width:150px;
+    aspect-ratio: 1/1;
+    object-fit:contain;
+}

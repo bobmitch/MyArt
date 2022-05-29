@@ -1,0 +1,76 @@
+
+		{
+			"title":"Art",
+			"id":"art",
+			"fields":[
+				{
+					"name":"artthumbnail",
+					"id":"artthumbnail",
+					"type":"Image",
+					"label":"Image",
+					"required":false,
+					"default":0
+				},
+				{
+					"type":"Select",
+					"id":"artmedia",
+					"name":"artmedia",
+					"required":true, 
+					"label":"Media",
+					"default":"oil",
+						"filter":"STRING",
+						"placeholder":"Please select",
+					"select_options":[
+						{"text":"Oil Paint","value":"Oil Paint"},
+						{"text":"Acrylic","value":"Acrylic"},
+						{"text":"Gouache","value":"Gouache"},
+						{"text":"Oil Pastel","value":"Oil Pastel"}
+					]
+				},
+				{
+					"type":"Select",
+					"id":"artdimensions",
+					"name":"artdimensions",
+					"required":true, 
+					"label":"Dimensions",
+					"default":"6x6",
+						"filter":"STRING",
+						"placeholder":"Please select",
+					"select_options":[
+						{"text":"6x6","value":"6x6"},
+						{"text":"11x7","value":"11x7"},
+						{"text":"12x12","value":"12x12"},
+						{"text":"24x16","value":"24x16"}
+					]
+				},
+				{
+					"type":"Select",
+					"id":"artlocation",
+					"name":"artlocation",
+					"required":true, 
+					"label":"Location",
+					"default":"studio",
+						"filter":"STRING",
+						"placeholder":"Please select",
+					"select_options":[
+						{"text":"Studio","value":"Studio"},
+						{"text":"Gallery","value":"Gallery"}
+					]
+				},
+				{
+					"type":"Select",
+					"id":"artstatus",
+					"name":"artstatus",
+					"required":true, 
+					"label":"Status",
+					"default":"available",
+						"filter":"STRING",
+						"placeholder":"Please select",
+					"select_options":[
+						{"text":"Available","value":"Available"},
+						{"text":"Sold","value":"Sold"},
+						{"text":"Commission","value":"Commission"}
+					]
+				}
+			]
+		}

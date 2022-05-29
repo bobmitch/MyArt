@@ -1,0 +1,12 @@
+# Ignore everything
+*
+# But descend into directories
+!*/
+# Recursively allow files under subtree
+!/core/controllers/art/**
+!/controllers/art/**
+!/templates/bulma/**
+!/user_classes/**
+!.gitignore
+!README.md
+!/widgets/login/**
