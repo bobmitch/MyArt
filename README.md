@@ -1,4 +1,4 @@
-# SeamlessCMS
+# MyArt
 Little management tool to help my wife with her art business
 
 ## Requirements
