@@ -19,6 +19,12 @@ $view = Content::get_view_location(CMS::Instance()->page->view);
 if ($segments[0]=='edit') {
 	$view="edit";
 }
+if ($segments[0]=='imagedragdrop') {
+	$view="imagedragdrop";
+}
+if ($segments[0]=='imageupload') {
+	$view="imageupload";
+}
 
 $controller = new Controller(realpath(dirname(__FILE__)),$view);
 $controller->load_view($view); 

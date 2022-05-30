@@ -6,7 +6,7 @@
 				{
 					"name":"artthumbnail",
 					"id":"artthumbnail",
-					"type":"Image",
+					"type":"UserImage",
 					"label":"Image",
 					"required":false,
 					"default":0

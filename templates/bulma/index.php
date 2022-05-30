@@ -85,12 +85,7 @@
 					<?php if (CMS::Instance()->user->is_member_of ('admin')):?>
 						<a class='button is-info' target="_blank" href='/admin'>Admin</a>
 					<?php endif; ?>
-					<a class='button is-info' href='/myprofile'>
-						<span class="icon">
-							<i class="fas fa-user"></i>
-						</span>&nbsp;
-						My Profile
-					</a>
+					
 					<?php if (CMS::Instance()->user->username=='guest'):?>
 					<a href='/login' class="button is-info">
 						Log In
