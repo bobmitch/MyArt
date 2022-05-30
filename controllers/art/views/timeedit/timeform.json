@@ -1,0 +1,54 @@
+
+		{
+			"title":"Time Form",
+			"id":"timeform",
+			"fields":[
+				{
+					"type":"Contentselector",
+                    "content_type":2,
+					"id":"timeart",
+					"name":"timeart",
+					"required":true, 
+                    "cur_user_only":true,
+					"label":"Art/Project"
+				},
+				{
+					"name":"timeentrytime",
+					"id":"timeentrytime",
+					"input_type":"text",
+					"type":"Text",
+					"label":"Time Spent",
+					"required":true,
+					"default":"",
+					"description":"Number of minutes, or hours and minutes like this h:m",
+					"maxlength":255,
+					"minlength":1,
+					"filter":"STRING"
+				},
+				{
+					"name":"timeentrynote",
+					"id":"timeentrynote",
+					"input_type":"text",
+					"type":"Text",
+					"label":"Note",
+					"required":false,
+					"default":"",
+					"maxlength":255,
+					"minlength":3,
+					"filter":"STRING"
+				},
+				{
+					"name":"timeentrytimestamp",
+					"id":"timeentrytimestamp",
+					"input_type":"date",
+					"type":"Text",
+					"label":"Date Of Work",
+					"required":false,
+					"default":"",
+					"description":"Leave blank if today",
+					"maxlength":255,
+					"minlength":1,
+					"filter":"STRING"
+				}
+			]
+		}

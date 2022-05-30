@@ -55,7 +55,7 @@ else {
 
 	$required_details_form->get_field_by_name('state')->default = $content->state;
 	$required_details_form->get_field_by_name('title')->default = $content->title;
-	$required_details_form->get_field_by_name('title')->label = "Art Title";
+	$required_details_form->get_field_by_name('title')->label = "Art Title (You change later if just starting!)";
 	$required_details_form->get_field_by_name('alias')->default = $content->alias;
 	$required_details_form->get_field_by_name('note')->default = $content->note;
 	$required_details_form->get_field_by_name('start')->default = $content->start;

@@ -76,6 +76,11 @@
 				My Art
 				</a>
 			</div>
+			<div class="navbar-item">
+				<a href='/time' class="navbar-item">
+				My Time
+				</a>
+			</div>
 		</div>
 
 		<div class="navbar-end">

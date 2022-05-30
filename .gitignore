@@ -5,6 +5,7 @@
 # Recursively allow files under subtree
 !/core/controllers/art/**
 !/controllers/art/**
+!/controllers/project/**
 !/templates/bulma/**
 !/user_classes/**
 !.gitignore

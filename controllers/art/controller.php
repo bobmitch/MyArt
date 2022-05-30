@@ -19,6 +19,9 @@ $view = Content::get_view_location(CMS::Instance()->page->view);
 if ($segments[0]=='edit') {
 	$view="edit";
 }
+if ($segments[0]=='timeedit') {
+	$view="timeedit";
+}
 if ($segments[0]=='imagedragdrop') {
 	$view="imagedragdrop";
 }

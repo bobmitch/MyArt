@@ -67,10 +67,37 @@
 						"filter":"STRING",
 						"placeholder":"Please select",
 					"select_options":[
+						{"text":"In Progress","value":"In Progress"},
 						{"text":"Available","value":"Available"},
 						{"text":"Sold","value":"Sold"},
 						{"text":"Commission","value":"Commission"}
 					]
+				},
+				{
+					"name":"projest",
+					"id":"projest",
+					"input_type":"number",
+					"type":"Text",
+					"label":"Estimated Hours",
+					"required":true,
+					"default":"",
+					"description":"Enter an estimated time for project completion",
+					"maxlength":255,
+					"minlength":3,
+					"filter":"INT"
+				},
+				{
+					"name":"projend",
+					"id":"projend",
+					"input_type":"date",
+					"type":"Text",
+					"label":"Estimated End Date",
+					"required":true,
+					"default":"",
+					"description":"Enter an estimated date for project completion",
+					"maxlength":255,
+					"minlength":3,
+					"filter":"STRING"
 				}
 			]
 		}
