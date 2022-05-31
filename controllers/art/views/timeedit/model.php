@@ -36,12 +36,20 @@ if ($content_form->is_submitted()) {
 		$art_id = $content_form->fields['timeart']->default;
 		$note = $content_form->fields['timeentrynote']->default;
 		$minutes = $content_form->fields['timeentrytime']->default;
+		// check minutes is good
+		if (!is_numeric($minutes)) {
+			// gotta convert xx:yy to minutes
+			$time_arr = explode(":",$minutes);
+			$hours_minutes = $time_arr[0] * 60;
+			$minutes = $hours_minutes + $time_arr[1];
+		}
 		$entrytimestamp = $content_form->fields['timeentrytimestamp']->default;
+		$timeactivity = $content_form->fields['timeactivity']->default;
 		if (!$entrytimestamp) {
 			$entrytimestamp = date('Y-m-d H:i:s',time());
 		}
 		//DB::exec('insert into time_entries (user_id, art_id, minutes, entrytime, note) values(?,?,?,?,?)', array(CMS::Instance()->user->id, $art_id, $minutes, $entrytimestamp,$note));
-		DB::exec('insert into time_entries (id, user_id, art_id, minutes, entrytime, note) values(?,?,?,?,?,?) ON DUPLICATE KEY UPDATE art_id=?, minutes=?, entrytime=?, note=?', array($content_id, CMS::Instance()->user->id, $art_id, $minutes, $entrytimestamp,$note, $art_id, $minutes, $entrytimestamp,$note));
+		DB::exec('insert into time_entries (id, user_id, art_id, minutes, entrytime, timeactivity, note) values(?,?,?,?,?,?,?) ON DUPLICATE KEY UPDATE art_id=?, minutes=?, entrytime=?, timeactivity=?, note=? ', array($content_id, CMS::Instance()->user->id, $art_id, $minutes, $entrytimestamp,$timeactivity, $note, $art_id, $minutes, $entrytimestamp, $timeactivity, $note));
 		//$content->save($required_details_form, $content_form, $url);
 		CMS::Instance()->queue_message('Time added','success','/time');	
 	}
@@ -56,5 +64,6 @@ else {
 	$content_form->get_field_by_name('timeentrytime')->default = $time_entry->minutes;
 	$content_form->get_field_by_name('timeentrynote')->default = $time_entry->note;
 	$content_form->get_field_by_name('timeentrytimestamp')->default = $time_entry->entrytime;
+	$content_form->get_field_by_name('timeactivity')->default = $time_entry->timeactivity;
 
 }

@@ -12,6 +12,7 @@ defined('CMSPATH') or die; // prevent unauthorized access
                 <th>Art/Project</th>
                 <th>Date</th>
                 <th>Time</th>
+                <th>Activity</th>
                 <th>Note</th>
                 <th>Action</th>
             </tr>
@@ -22,6 +23,7 @@ defined('CMSPATH') or die; // prevent unauthorized access
                     <td><?php echo $entry->title;?></td>
                     <td><?php echo date("F j, Y",strtotime($entry->entrytime));?></td>
                     <td><?php echo $entry->minutes;?></td>
+                    <td><?php echo $entry->timeactivity;?></td>
                     <td><?php echo $entry->note;?></td>
                     <td>
                         <a href='/art/timeedit/<?php echo $entry->id;?>' class='button is-info is-small'>Edit</a>
