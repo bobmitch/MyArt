@@ -13,7 +13,7 @@ defined('CMSPATH') or die; // prevent unauthorized access
 	window.uripath = "<?php echo Config::$uripath; ?>";
 </script>
 <div id='upload_space'><h1>Drag & Drop New Images Here</h1></div>
-
+<input id='regular_upload' type="file" multiple/>
 
 <div id='rename_image_modal' class="modal">
   <div class="modal-background"></div>
