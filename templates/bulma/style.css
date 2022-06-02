@@ -36,3 +36,11 @@ a.search_result_button.button.is-light.is-info {
     aspect-ratio: 1/1;
     object-fit:contain;
 }
+.container {
+    /* padding-left: 15px;
+    padding-right: 15px; */
+}
+.container {
+    max-width:calc(100% - 50px);
+    overflow-x:auto;
+}
