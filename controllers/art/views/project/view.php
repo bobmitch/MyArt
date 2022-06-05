@@ -8,7 +8,7 @@ defined('CMSPATH') or die; // prevent unauthorized access
 <div class='container contain'>
     <a href='/art/timeedit' class='is-pulled-right pull-right button is-primary'>New Time Entry</a>
     <h1 class='title is-1 '>My Time</h1>
-    <p><strong>Last 7 days</strong></p>
+    <p><strong>Last 7 days - <?php echo $hours_and_mins_week; ?></strong></p>
     <p class='note'>Time below shown in minutes</p>
     <div class="ct-chart ct-double-octave"></div>
 </div>

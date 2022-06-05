@@ -1,8 +1,20 @@
 <?php
 defined('CMSPATH') or die; // prevent unauthorized access
 
+function convertToHoursMins($time, $format = '%02d:%02d') {
+    if ($time < 1) {
+        return;
+    }
+    $hours = floor($time / 60);
+    $minutes = ($time % 60);
+    return sprintf($format, $hours, $minutes);
+}
+
 // all entries for week
 $time_entries = DB::fetchAll('select t.*, a.title as title from time_entries t, content a WHERE user_id=? and t.art_id=a.id AND t.entrytime > NOW() - INTERVAL 7 DAY ORDER BY t.entrytime DESC',array(CMS::Instance()->user->id));
+
+$total_mins_week = DB::fetch('select SUM(minutes) as total from time_entries where entrytime>NOW() - INTERVAL 7 DAY and user_id=?', CMS::Instance()->user->id)->total;
+$hours_and_mins_week = convertToHoursMins($total_mins_week, '%02d hours %02d minutes');
 
 // summed totals for last week
 $time_by_day = DB::fetchAll('
