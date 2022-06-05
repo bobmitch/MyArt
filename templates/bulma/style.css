@@ -7,6 +7,11 @@ body,html {
     background:#fdfdfd;
 }
 
+p.note {
+    font-style:italic;
+    opacity:0.5;
+}
+
 footer:not(.modal-card-foot) {
     clear:both;
     margin-top:3rem;

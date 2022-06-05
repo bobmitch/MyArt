@@ -2,10 +2,20 @@
 defined('CMSPATH') or die; // prevent unauthorized access
 ?>
 
-<div class="container contain">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+<script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+
+<div class='container contain'>
     <a href='/art/timeedit' class='is-pulled-right pull-right button is-primary'>New Time Entry</a>
     <h1 class='title is-1 '>My Time</h1>
     <p><strong>Last 7 days</strong></p>
+    <p class='note'>Time below shown in minutes</p>
+    <div class="ct-chart ct-double-octave"></div>
+</div>
+
+<div class="container contain">
+    
+    
     <div class="table-container">
         <table class='table is-fullwidth'>
             <thead>
@@ -35,3 +45,10 @@ defined('CMSPATH') or die; // prevent unauthorized access
         </table>
     </div>
 </div>
+
+
+<script>
+    var week_chart_data = <?php echo json_encode($week_chart_data);?> ;
+    new Chartist.Line('.ct-chart',week_chart_data);
+</script>
+
