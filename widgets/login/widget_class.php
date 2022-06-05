@@ -86,7 +86,7 @@ class Widget_login extends Widget {
 					</div>
 				<br>
 				<button class='cta btn button is-primary' type='submit'>Sign Me In</button>
-				<br>
+				<br><br><br>
 				<?php Hook::execute_hook_actions('additional_login_options'); ?>
 				
 			</form>
