@@ -12,6 +12,20 @@ function convertToHoursMins($time, $format = '%02d:%02d') {
 
 ?>
 
+<div class="contain container">
+    <form action="" method="GET" class="form">
+        <div class="control">
+            <input name="searchtext" class="input" type="text" placeholder="Search">
+        </div>
+    </form>
+</div>
+<br>
+<?php if ($searchtext):?>
+    <div class='container contain'>
+        <p>Searching for &ldquo;<?php echo $searchtext;?>&rdquo;</p>
+    </div>
+<?php endif; ?>
+<br>
 <div class="container contain">
     <a href='/art/edit' class='is-pulled-right pull-right button is-primary'>New Art</a>
     <h1 class='title is-1 '>My Art</h1>
